@@ -1,0 +1,155 @@
+Flow report for Lab7_1
+Mon Apr 17 18:32:51 2023
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Mon Apr 17 18:32:51 2023       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; Lab7_1                                      ;
+; Top-level Entity Name              ; lab7                                        ;
+; Family                             ; MAX 10                                      ;
+; Device                             ; 10M50DAF484C7G                              ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 36,974 / 49,760 ( 74 % )                    ;
+;     Total combinational functions  ; 30,820 / 49,760 ( 62 % )                    ;
+;     Dedicated logic registers      ; 21,747 / 49,760 ( 44 % )                    ;
+; Total registers                    ; 21816                                       ;
+; Total pins                         ; 141 / 360 ( 39 % )                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 11,392 / 1,677,312 ( < 1 % )                ;
+; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
+; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
+; ADC blocks                         ; 0 / 2 ( 0 % )                               ;
++------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 04/17/2023 18:22:41 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; Lab7_1              ;
++-------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                      ;
++-------------------------------------+------------------------------------------------------------+---------------+-------------------+----------------+
+; Assignment Name                     ; Value                                                      ; Default Value ; Entity Name       ; Section Id     ;
++-------------------------------------+------------------------------------------------------------+---------------+-------------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 103390019799527.168177376018904                            ; --            ; --                ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                                          ; --            ; --                ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)                            ; <None>        ; --                ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                                                       ; --            ; --                ; eda_simulation ;
+; FLOW_ENABLE_POWER_ANALYZER          ; On                                                         ; Off           ; --                ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                         ; --            ; --                ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                          ; --            ; --                ; --             ;
+; MISC_FILE                           ; lab71soc/synthesis/../lab71soc.cmp                         ; --            ; --                ; --             ;
+; MISC_FILE                           ; lab71soc/synthesis/../../lab71soc.qsys                     ; --            ; --                ; --             ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                                          ; --            ; --                ; --             ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                                          ; --            ; --                ; --             ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                                                 ; --            ; --                ; --             ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                                                 ; --            ; --                ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                     ; --            ; DE10_LITE_Default ; Top            ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                     ; --            ; lab62             ; Top            ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                     ; --            ; lab7              ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                     ; --            ; DE10_LITE_Default ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                     ; --            ; lab62             ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                     ; --            ; lab7              ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                     ; --            ; DE10_LITE_Default ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                     ; --            ; lab62             ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                     ; --            ; lab7              ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                        ; --            ; --                ; --             ;
+; POWER_DEFAULT_INPUT_IO_TOGGLE_RATE  ; 12.5 %                                                     ; 12.5%         ; --                ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                      ; --            ; --                ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                               ; --            ; --                ; --             ;
+; SLD_FILE                            ; lab71soc/synthesis/lab71soc.regmap                         ; --            ; --                ; --             ;
+; SLD_FILE                            ; lab71soc/synthesis/lab71soc.debuginfo                      ; --            ; --                ; --             ;
+; SLD_INFO                            ; QSYS_NAME lab71soc HAS_SOPCINFO 1 GENERATION_ID 1681773643 ; --            ; lab71soc          ; --             ;
+; SOPCINFO_FILE                       ; lab71soc/synthesis/../../lab71soc.sopcinfo                 ; --            ; --                ; --             ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                         ; --            ; --                ; --             ;
+; TOP_LEVEL_ENTITY                    ; lab7                                                       ; Lab7_1        ; --                ; --             ;
++-------------------------------------+------------------------------------------------------------+---------------+-------------------+----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:02:45     ; 1.0                     ; 6839 MB             ; 00:03:01                           ;
+; Fitter               ; 00:06:03     ; 1.4                     ; 6298 MB             ; 00:13:42                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4812 MB             ; 00:00:05                           ;
+; Power Analyzer       ; 00:00:29     ; 3.1                     ; 5174 MB             ; 00:01:24                           ;
+; Timing Analyzer      ; 00:00:25     ; 3.8                     ; 5221 MB             ; 00:01:25                           ;
+; EDA Netlist Writer   ; 00:00:09     ; 1.0                     ; 4990 MB             ; 00:00:09                           ;
+; Total                ; 00:09:56     ; --                      ; --                  ; 00:19:46                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; LAPTOP-B1FJ11KK  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; LAPTOP-B1FJ11KK  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; LAPTOP-B1FJ11KK  ; Windows 10 ; 10.0       ; x86_64         ;
+; Power Analyzer       ; LAPTOP-B1FJ11KK  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; LAPTOP-B1FJ11KK  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-B1FJ11KK  ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off Lab7_1 -c Lab7_1
+quartus_fit --read_settings_files=off --write_settings_files=off Lab7_1 -c Lab7_1
+quartus_asm --read_settings_files=off --write_settings_files=off Lab7_1 -c Lab7_1
+quartus_pow --read_settings_files=off --write_settings_files=off Lab7_1 -c Lab7_1
+quartus_sta Lab7_1 -c Lab7_1
+quartus_eda --read_settings_files=off --write_settings_files=off Lab7_1 -c Lab7_1
+
+
+

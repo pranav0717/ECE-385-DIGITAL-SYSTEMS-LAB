@@ -1,0 +1,27 @@
+19:24:20 **** Incremental Build of configuration Nios II for project lab7_2_app ****
+make all 
+Info: Building ../lab7_2_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab7_2_app_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../lab7_2_app_bsp//HAL/inc -I../lab7_2_app_bsp/ -I../lab7_2_app_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+In file included from main.c:1:0:
+text_mode_vga_color.h:33:52: error: 'VGA_TEXT_MODE_CONTROLLER_0_BASE' undeclared here (not in a function)
+ static volatile struct TEXT_VGA_STRUCT* vga_ctrl = VGA_TEXT_MODE_CONTROLLER_0_BASE;
+                                                    ^
+main.c: In function 'main':
+main.c:6:3: warning: implicit declaration of function 'textVGATest' [-Wimplicit-function-declaration]
+   textVGATest();
+   ^
+In file included from main.c:1:0:
+main.c: At top level:
+text_mode_vga_color.h:33:41: warning: 'vga_ctrl' defined but not used [-Wunused-variable]
+ static volatile struct TEXT_VGA_STRUCT* vga_ctrl = VGA_TEXT_MODE_CONTROLLER_0_BASE;
+                                         ^
+text_mode_vga_color.h:36:21: warning: 'colors' defined but not used [-Wunused-variable]
+ static struct COLOR colors[]={
+                     ^
+make: *** [obj/default/main.o] Error 1
+
+19:24:21 Build Finished (took 1s.461ms)
+

@@ -1,0 +1,39 @@
+module PCMUX( input [1:0] select,
+    input[15:0] logic PC_1,
+    input[15:0] logic bus,
+    input[15:0] logic Adder_out,
+    output[15:0] logic m_4
+
+   
+);
+
+ always_comb begin
+       case(select)
+            2'b00: m_4 = PC_1;
+            2'b01: m_4 = bus;
+            2'b10: m_4 = Adder_out;
+              default: m_4 = 16'hXXXX;
+
+       endcase
+    end
+
+endmodule
+
+module MEMMUX( input select,
+    input[15:0] logic bus,
+    input[15:0] logic mem_in,
+    output[15:0] logic m_4,
+
+   
+);
+
+ always_comb begin
+       case(select)
+            2'b00: m_4 = bus;
+            2'b01: m_4 = mem_in;
+            default: m_4 = 16'hXXXX;
+       endcase
+    end
+
+endmodule
+

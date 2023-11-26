@@ -1,0 +1,116 @@
+
+Aidan Dunican <aidan.dunican03@gmail.com>
+4:04 PM (54 minutes ago)
+to me
+
+module testbench();
+
+ 
+
+timeunit 10ns;
+
+ 
+
+timeprecision 1ns;
+
+ 
+
+logic Clk;
+
+logic Reset_Clear;
+
+logic Run_Accumulate;
+
+//logic LoadB;
+
+logic [9:0] SW;
+ 
+
+logic [9:0] LED;
+logic [6:0] HEX0;
+logic [6:0] HEX1;
+logic [6:0] HEX2;
+logic [6:0] HEX3;
+logic [6:0] HEX4;
+logic [6:0] HEX5;
+
+
+
+always begin : CLOCK_GENERATION
+
+ 
+
+#1 Clk = ~Clk;
+
+ 
+
+end
+
+ 
+
+ 
+
+initial begin : CLOCK_INITIALIZATION
+
+                Clk = 0;
+
+end
+
+ 
+
+ 
+
+multiplier_toplevel tp(.*);
+
+ 
+
+ 
+
+initial begin: TEST_VECTORS
+
+Reset_Clear = 1;
+Run_Accumulate = 1;
+//LoadB = 1;
+
+SW = 8'b00000111;
+
+
+#2 Reset_Clear = 0;
+#2 Reset_Clear = 1;
+ SW = 8'b11000101;
+
+#2 Run_Accumulate = 0;
+
+ 
+
+
+
+ 
+
+//#2 LoadB = 0;
+
+                  // = 16'b0000000000000001
+
+               
+
+//#2 LoadB = 1;
+
+               
+
+               
+
+#2 Run_Accumulate = 1;
+
+ 
+
+#22 ;
+
+ 
+
+ 
+
+end
+
+ 
+
+endmodule

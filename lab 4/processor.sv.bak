@@ -1,0 +1,65 @@
+module Processor ( input logic Clk, Reset_h, ClearA_LoadB_h, Run_h,
+Input logic [7:0] SW,
+output logic [7:0] Aval, Bval, 
+output logic [6:0] HEX0, HEX1, HEX2, HEX3, 
+//output logic[7:0] Aval, Bval,
+output logic X  );
+
+
+// create local variables here
+logic ClearA_loadB, reset, add, sub, Clear_x_a, clr_ld, shift, run,m,A, B ;
+
+// instantiation 
+HexDriver        HexAL (
+                        .In0(A[3:0]),
+                        .Out0(AhexL) );
+	 HexDriver        HexBL (
+                        .In0(B[3:0]),
+                        .Out0(BhexL) );
+
+HexDriver        HexAU (
+                        .In0(A[7:4]),
+                        .Out0(AhexU) );	
+	 HexDriver        HexBU (
+                       .In0(B[7:4]),
+                        .Out0(BhexU) );
+                        
+control          control_unit (
+                        .Clk(Clk),
+                        .Reset(reset),
+                        .Run(run),
+                        .ClearA_LoadB(ClearA_loadB),
+                        .Shift(shift),
+                        .Add(add),
+                        .Sub(sub),
+                        .clear_x_a(Clear_x_a),
+                        .Clr_ld(clr_ld)
+                        .M(m));
+
+
+//  register_unit    reg_unit (
+//                         .Clk(Clk),
+//                         .Reset(Reset_SH),
+//                         .Ld_A, //note these are inferred assignments, because of the existence a logic variable of the same name
+//                         .Ld_B,
+//                         .Shift_En,
+//                         .D(Din_S),
+//                         .A_In(newA),
+//                         .B_In(newB),
+//                         .A_out(opA),
+//                         .B_out(opB),
+//                         .A(A),
+//                         .B(B) );
+
+
+
+
+
+	  sync b[2:0] (Clk, {~Reset_h, ~ClearA_LoadB_h, ~Run_h},     {reset, ClearA_loadB, run});
+	  
+
+      assign Aval = A;
+      assign Bval = B;
+
+
+endmodule
